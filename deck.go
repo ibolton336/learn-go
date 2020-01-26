@@ -2,9 +2,9 @@ package main
 
 import (
 	"fmt"
+	"io/ioutil"
 	"strings"
 )
-
 
 // create a new type of deck which is a slice of string
 
@@ -40,3 +40,6 @@ func (d deck) toString() string {
 
 }
 
+func (d deck) saveToFile(filename string) error {
+	return ioutil.WriteFile(filename, []byte(d.toString()), 0666)
+}

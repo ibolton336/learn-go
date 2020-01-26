@@ -2,14 +2,15 @@ package main
 
 import "fmt"
 
+
 func main() {
-	cards := deck{"Ace of Diamonds", newCard()}
-	cards = append(cards, "Sic of spaced")
-	cards.print()
-	fmt.Println(cards)
+	// cards := newDeck()
+	// hand, remainingCards := deal(cards, 5)
 
-}
+	// hand.print() 
+	// remainingCards.print()
 
-func newCard() string {
-	return "Five of diamonds"
+	//type conversion!
+	greeting := "HI there"
+	fmt.Println([]byte(greeting))
 }

@@ -26,13 +26,21 @@ func main() {
 			email:   "i@s.com",
 			zipCode: 27609,
 		}}
-	ian.updateName("yanni")
+
+	//turn value into address
+	ianPointer := &ian
+
+	ianPointer.updateName("yanni")
 	ian.print()
 
 }
 func (p person) print() {
 	fmt.Printf("%v", p)
 }
-func (p person) updateName(newFirstName string) {
-	p.firstName = newFirstName
+
+// type of pointer indicated by *person
+func (pointerToPerson *person) updateName(newFirstName string) {
+
+	//turn address to value
+	(*pointerToPerson).firstName = newFirstName
 }

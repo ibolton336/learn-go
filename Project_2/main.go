@@ -28,9 +28,9 @@ func main() {
 		}}
 
 	//turn value into address
-	ianPointer := &ian
+	// ianPointer := &ian
 
-	ianPointer.updateName("yanni")
+	ian.updateName("yanni")
 	ian.print()
 
 }
@@ -39,8 +39,12 @@ func (p person) print() {
 }
 
 // type of pointer indicated by *person
+
+// go will auto coax the value from the address here by using *person shortcut
 func (pointerToPerson *person) updateName(newFirstName string) {
 
 	//turn address to value
 	(*pointerToPerson).firstName = newFirstName
 }
+
+//slices arent pass by value?
